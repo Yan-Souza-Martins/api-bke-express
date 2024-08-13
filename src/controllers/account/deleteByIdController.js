@@ -1,5 +1,5 @@
-const DELETEid =  (req, res) => {
+const deleteById =  (req, res) => {
     res.json({massege: "Rota DELETE /:id"}) //Deletar conta
 }
 
-export default DELETEid
+export default deleteById

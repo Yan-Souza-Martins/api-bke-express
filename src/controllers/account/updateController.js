@@ -1,5 +1,5 @@
-const PUTid =  (req, res) => {
+const updateById =  (req, res) => {
     res.json({massege: "Rota PUT /:id"}) //Atualizar conta
 }
 
-export default PUTid
+export default updateById

@@ -1,5 +1,5 @@
-const account = (req, res) => {
+const create = (req, res) => {
     res.json({massege: "Rota de POST /Account"}) //Entrar na conta
 }
 
-export default account
+export default create
