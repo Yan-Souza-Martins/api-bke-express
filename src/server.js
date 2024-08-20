@@ -9,6 +9,6 @@ app.use('/auth', authRouter)
 app.use('/account', accountRouter)
 
 
-app.listen(3000, () =>{
-    console.log('Servidor Rodando em http://localhost:3000')
+app.listen(process.env.PORT,  () =>{
+    console.log(`Servidor Rodando no Ambiente ${process.env.AMBIENTE}`)
 })
