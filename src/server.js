@@ -11,5 +11,5 @@ app.use('/account', accountRouter)
 
 
 app.listen(PORT,  () =>{
-    console.log(`Servidor Rodando no Ambiente ${ENVIRONMENT} em ${HOST}:${PORT}`)
+        console.log(`Servidor Rodando no Ambiente ${ENVIRONMENT} em ${ ENVIRONMENT == 'production' ? HOST : HOST + ':' + PORT }`)
 })
