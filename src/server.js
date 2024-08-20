@@ -5,8 +5,9 @@ import { ENVIRONMENT, PORT, HOST } from "./config.js"
 
 const app = express()
 
-app.use('/auth', authRouter)
+app.get('/', (req, res) => {res.json({massage: "Bem vidno a API"})})
 
+app.use('/auth', authRouter)
 app.use('/account', accountRouter)
 
 
