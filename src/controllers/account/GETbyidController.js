@@ -1,5 +1,19 @@
-const getById =  (req, res) => {
-    res.json({massege: "Rota GET /:id"}) //Chamar conta pelo id
+import { getByIdAccount } from "../../models/accountModel.js"
+
+const getById = async (req, res) => {
+    const {id} = req.params
+    const account = await getByIdAccount(+id)
+
+    if(!account)
+        return res.status(404).json({
+            error:`Conta com id ${id}, não encontrado`
+        })
+
+    return res.json({
+        success: "Conta encontrada com sucesso!",
+        account
+    })   
+
 }
 
 export default getById
