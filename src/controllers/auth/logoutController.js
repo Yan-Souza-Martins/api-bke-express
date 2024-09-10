@@ -1,5 +1,5 @@
-const logout = (req, res) =>{
-    res.json({massage: "Rota de POST Logout",}) //Autenticação sair da conta
+const logout = (req, res) => {
+    res.json({message: "Rota de POST Auth/Logout"})
 }
 
 export default logout
