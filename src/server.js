@@ -14,6 +14,10 @@ app.get('/', (req, res) => {res.json({message: "Bem-vindo a API!"})})
 app.use('/auth', authRouter)
 app.use('/account', accountRouter)
 
+app.use((err, req, res, next) => {
+    console.error( )
+})
+
 app.listen(PORT, () => {
     console.log(`Servidor Rodando no ambiente ${ENVIRONMENT} em ${ ENVIRONMENT == 'production' ? HOST : HOST+':'+PORT }`)
 })

@@ -2,6 +2,7 @@ import { update } from "../../models/accountModel.js"
 
 const updateController = async (req, res) => {
     const account = req.body
+    try {
     const {id} = req.params
     account.id = +id
 
@@ -16,6 +17,12 @@ const updateController = async (req, res) => {
         success: "Conta atualizada com sucesso!",
         account: result
     })
+} catch(error) {
+    console.error(error)
+    return res.status(500).json({
+        error: `Erro no servidor!`
+    })
+}
 }
 
 export default updateController
