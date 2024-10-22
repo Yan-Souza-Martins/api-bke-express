@@ -1,4 +1,3 @@
-
 import express from 'express'
 import createController from '../controllers/account/createController.js'
 import getByIdController from '../controllers/account/getByIdController.js'

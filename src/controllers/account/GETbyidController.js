@@ -1,7 +1,7 @@
 import { getByIdAccount, accountValidateId } from "../../models/accountModel.js"
 
 const getById = async (req, res, next) => {
-    
+    //const id = req.params.id
     try{ 
         const {id} = req.params
 
